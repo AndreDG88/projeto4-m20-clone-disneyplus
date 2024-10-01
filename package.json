@@ -1,0 +1,21 @@
+{
+  "name": "projeto4-m21-clone-disneyplus",
+  "version": "1.0.0",
+  "description": "Projeto 4 do Módulo 21 no curso EBAC",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "AndreDG88"
+  },
+  "author": "André Soares",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.79.4"
+  }
+}
