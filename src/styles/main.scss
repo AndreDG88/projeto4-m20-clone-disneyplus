@@ -6,6 +6,7 @@
 @use 'available-devices';
 @use 'faq';
 @use 'footer';
+@use 'header';
 
 // config das fontes
 @font-face {
@@ -38,6 +39,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Avenir, sans-serif;
+    list-style: none;
 }
 
 body {
@@ -76,7 +78,9 @@ body {
 }
 
 .button {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 60px;
     font-size: 18px;
@@ -84,9 +88,34 @@ body {
     background-color: variaveis.$corDoFundoDoBotao;
     text-transform: uppercase;
     border-radius: 4px;
-    margin-top: 2vw;
-    margin-bottom: 8px;
+    text-decoration: none;
+    padding: 8px 14px;
+    letter-spacing: 1px;
+    border: 1px solid variaveis.$corDoFundoDoBotao;
     cursor: pointer;
+
+    &:hover {
+        background-color: lighten(variaveis.$corDoFundoDoBotao, 3%);
+    }
+
+    &--secondary {
+        background-color: variaveis.$corDoFundoDoBotaoSecundario;
+        border-color: variaveis.$corDoFundoDoBotaoSecundario;
+
+        &:hover {
+            background-color: lighten(variaveis.$corDoFundoDoBotaoSecundario, 3%);
+        }
+    }
+
+    &--dark {
+        background-color: rgba(variaveis.$corDoFundoDoBotaoDark, 0.8);
+        border-color: variaveis.$corTextoSecundario;
+
+        &:hover {
+            background-color: variaveis.$corTextoSecundario;
+            color: variaveis.$corDeFundo;
+        }
+    }
 }
 
 .image-text-section {
